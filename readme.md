@@ -93,7 +93,7 @@ The website uses MongoDB cloud database for storing the data fields efficiently.
 
 ### 1. Clone the `Football-Dimes` repository
 ```
-https://github.com/Aihab1/Football-Dimes.git
+git clone https://github.com/Aihab1/Football-Dimes.git
 # cd into server and client one by one and refer .env.example file to create your own .env file for storing environment variables. Please make sure you complete this step before running the application.
 ```
 
