@@ -11,7 +11,7 @@
   It allows users to post about their favourite football players, like posts made by other users, get player-specific news, and create sections for discussing players, leagues, and clubs.
 </p>
 <p align="center">
-  <strong>MongoDB | Expressjs | React/Redux | Nodejs</strong>
+  <strong><img src="https://img.shields.io/badge/MongoDB-4EA94B?style=for-the-badge&logo=mongodb&logoColor=white" /> <img src="https://img.shields.io/badge/Express.js-000000?style=for-the-badge&logo=express&logoColor=white" /> <img src="https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB" /> <img src="https://img.shields.io/badge/Redux-593D88?style=for-the-badge&logo=redux&logoColor=white" /> <img src="https://img.shields.io/badge/Node.js-339933?style=for-the-badge&logo=nodedotjs&logoColor=white" /></strong>
 </p>
     
 ![Screenshot3](https://user-images.githubusercontent.com/55903466/134020098-b12931d3-c9c8-48fa-a466-fe7824b0e61c.png)
@@ -27,11 +27,60 @@ Directory `server`
 `GET` **/players**
   - Read the complete players list
 
+> Successful (200 status code) response is of the form:
+
+```
+{
+    "data": [
+        {
+            "_id": "some_player_id",
+            "player_name": "Lionel Messi",
+            "description": "some_description"
+            "name": "creator_name",
+            "creator": "creator_id",
+            "tags": ["goat", "psg", "argentina", ...],
+            "selectedFile": "data:image/jpeg;base64... (base64 image)",
+            "likes": ["user_id1", "user_id2", ... , "user_id(n)"],
+            "comments": ["commaent1", "comment2", ... , "comment(n)"],
+            "createdAt": "2021-XX-16T14:37:41.840Z"
+        }, {
+            "_id": "some_player_id_2",
+             ...
+        },
+        ...
+    ],
+    "currentPage": 1,
+    "numberOfPages": 30
+}
+```
+
 `GET` **/players/:id**
   - Read a player by id
 
+> Successful (200 status code) response is of the form:
+
+```
+{
+    "data": {
+        "_id": "some_player_id",
+        "player_name": "Memphis Depay",
+        "description": "some_description",
+        "name": "creator_name",
+        "creator": "creator_id",
+        "tags": ["tag1", "tag2", "tag3", ...],
+        "selectedFile": "data:image/jpeg;base64 (image file)",
+        "likes": ["user_id1", "user_id2", ...],
+        "comments": ["comment1", "comment2", ...],
+        "createdAt": "2021-XX-16T14:52:52.812Z",
+        "articles": [array_of_news_articles (see newsapi.org documentation)]
+     }
+}
+```
+
 `GET` **/players/search**
   - Read a player by a particular tag / search query
+
+> Same response as GET /players/:id, search terms are sent as query params.
 
 `POST` **/players**
   - Create a player card (authentication required)
@@ -39,7 +88,7 @@ Directory `server`
 `POST` **/players/:id/commentPlayer**
   - Comment on a player profile (authentication required)
 
-`PATCH` **/players**
+`PATCH` **/players/:id**
   - Update a player card (authentication required, only the creator can update)
 
 `PATCH` **/players/:id/likePlayer**
@@ -65,22 +114,22 @@ Directory `client`
 #### Features:
 
 1. **Complete CRUD functionality**
-> Supports create, read, update, and delete operations for player cards.
+    - Supports create, read, update, and delete operations for player cards.
 
 2. **Player profiles**
-> Profile features include fetching player-specific news, getting player suggestions, commenting and more.
+    - Profile features include fetching player-specific news, getting player suggestions, commenting, and more.
 
 3. **Search feature**
-> Search a player by name / tags.
+    - Search a player by name / tags.
 
 4. **Liking**
-> Like / unlike a player card. (Authentication required for liking)
+    - Like / unlike a player card. (Authentication required for liking)
 
 5. **Pagination**
-> Pagination feature for fast and smooth user experience.
+    - Pagination feature for fast and smooth user experience.
 
 6. **Others**
-> Player cards support time stamps, edit & delete options, image (base64) & tags, and liking feature. News articles are clickable and direct you to the news source.
+    - Player cards support time stamps, edit & delete options, image (base64) & tags, and liking feature. News articles are clickable and direct you to the news source.
 
 ### 3. MongoDB + Mongoose Models (Database)
 
