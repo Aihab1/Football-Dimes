@@ -7,6 +7,8 @@
 
 <p align="center">
   Football Dimes is a football-themed social media web application built upon the MERN stack.
+  <br>
+  It allows users to post about their favourite football players, like posts made by other users, get player-specific news, and create sections for discussing players, leagues, and clubs.
 </p>
 <p align="center">
   <strong>MongoDB | Expressjs | React/Redux | Nodejs</strong>
@@ -82,7 +84,7 @@ Directory `client`
 
 ### 3. MongoDB + Mongoose Models (Database)
 
-The website uses MongoDB cloud database for storing the data fields efficiently. Mongoose is used for creating playerCard schema and user scheme (for authentication).
+The website uses MongoDB cloud database for storing the data fields efficiently. Mongoose is used for creating playerCard schema and user schema (for authentication).
 
 ## 🖼 Website Images
 
