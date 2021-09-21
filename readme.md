@@ -24,7 +24,7 @@ Directory `server`
     
 **Football Dimes Backend supports the following API endpoints:**
 
-View the complete API documentation <a href="https://google.com">here</a>.
+View the complete API documentation <a href="https://github.com/Aihab1/Football-Dimes/tree/main/server#readme">here</a>.
 
 `GET` **/players**
 
