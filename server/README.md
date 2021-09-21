@@ -95,8 +95,25 @@ curl --location --request GET 'https://your-backend-url.com/players/search?searc
 
 `POST` **/user/signup**
   - Create an account
-> Requires an object with firstName, lastName, email, password, and confirmPassword attributes. Any field should not be null.
+> Requires an object with firstName, lastName, email, password, and confirmPassword attributes. Any field should not be null. Sample request using cURL:
+
+```
+curl --location --request POST 'https://your-backend-url/user/signup' \
+--header 'Content-Type: application/x-www-form-urlencoded' \
+--data-urlencode 'email=youremail@domain.com' \
+--data-urlencode 'password=yourpassword' \
+--data-urlencode 'confirmPassword=yourpassword' \
+--data-urlencode 'firstName=Your First Name' \
+--data-urlencode 'lastName=Your Second Name'
+```
 
 `POST` **/user/signin**
   - Sign in 
-> Requires an object with email and password attributes. Any field should not be null.
+> Requires an object with email and password attributes. Any field should not be null. Sample request using cURL with dummy account data:
+
+```
+curl --location --request POST 'https://your-backend-url/user/signin' \
+--header 'Content-Type: application/x-www-form-urlencoded' \
+--data-urlencode 'email=antonymarthel@gmail.com' \
+--data-urlencode 'password=12345'
+```
