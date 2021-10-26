@@ -43,7 +43,7 @@ curl --location --request GET 'https://your-backend-url.com/players'
 
 > Sample request using cURL:
 ```
-curl --location --request GET 'https://your-backend-url.com/players/search?searchQuery=ronaldo&tags=goat,striker'
+curl --location --request GET 'https://your-backend-url.com/players/some_player_id'
 ```
 
 > Successful (200 status code) response is of the form:
