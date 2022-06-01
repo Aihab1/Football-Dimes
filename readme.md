@@ -55,7 +55,7 @@ Directory `client`
 #### Features:
 
 1. **Complete CRUD functionality**
-    - Supports create, read, update, and delete operations for player cards.
+    - Supports create, read, update, and delete (CRUD) operations for player cards.
 
 2. **Player profiles**
     - Profile features include fetching player-specific news, getting player suggestions, commenting, and more.
